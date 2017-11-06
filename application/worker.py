@@ -23,7 +23,7 @@ class Convert2Roman(int):
         if number < 0:
             raise ValueError('NEGATIVE VALUES NOT SUPPORTED!')
 
-        return super(Convert2Roman, cls).__new__(cls, number)  # a little bit of recursion
+        return super(Convert2Roman, cls).__new__(cls, number)
 
     def __init__(self, number):
         to_roman = {1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX', 10: 'X',

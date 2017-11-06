@@ -58,7 +58,6 @@ def index():
 
         results = [q for q in query_db] or []
 
-        import ipdb; ipdb.set_trace()
         if results is not []:
             db.session.close()
 

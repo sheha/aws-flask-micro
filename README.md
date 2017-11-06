@@ -9,7 +9,7 @@ There are screenshots in the repo, which show the infrastructure details.
 RDS.jpeg, EBS.jpeg
 
 ![Alt text](RDS.jpg "RDS details")
-![Alt text](EBS.jpg "RDS details")
+
 
 
 The solution itself is in worker.py, wrapped in boilerplate Flask code, to be usable as an exposed
@@ -57,20 +57,46 @@ Solution execution:
 
 
 DEPLOYMENT:
-boto - main AWS Python extension
-awsebcli - elastic 
 
-Create a new user for the app, add it to/create a group with Administrative Access.
+boto - aws AIO.
+
+awsebcli - elastic deployment. 
+
+Short Deployment steps:
+
+Create a new user for the app in the AWS Management Console, add it to/create a group with Administrative Access.
 
 Use the given access credentials in further setup:
 ![Alt text](AWSCREDS.jpg "RDS details")
 
 ```$ eb init ```
+
 Choose the location closest to you, mine is eu-central,
 ignore the error,
+
 now is the time to enter your credentials, as mine in the pic above.
+
 Leave the app name default, choose Python 2.7.
 I left the ssh access locked, can be changed later.
+
+Next, do
+```eb create```
+
+Here is a screenshot of a successful deployment:
+![Alt text](EBS.jpg "RDS details")
+
+The app is available at:
+```http://awsflaskmicro.eu-central-1.elasticbeanstalk.com```
+
+With my public repo here:
+
+```https://github.com/sheha/aws-flask-micro```
+
+Hope you like it, it's simple and effective.
+
+
+
+
 
 
 
