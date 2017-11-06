@@ -5,12 +5,7 @@ Solution to the challenge, written in Python, utilizing Flask MicroFramework, fu
 Uses MySql instance on RDS (Free-Tier, 7 day persistence, 5GB, only one server instance).
 
 The code itself is deployed on AWS Elastic Beanstalk infrastructure, also Free-Tier.
-There are screenshots in the repo, which show the infrastructure details.
-RDS.jpeg, EBS.jpeg
-
-![Alt text](RDS.jpg "RDS details")
-
-
+There are screenshots in this file, which show the infrastructure and solution architecture details.
 
 The solution itself is in worker.py, wrapped in boilerplate Flask code, to be usable as an exposed
 API on AWS.
@@ -51,12 +46,17 @@ Using the bottom form, you can see the last 1 to 9 entires of the database in re
 IMPORTANT: For the >=4K values, I am using the ~IV, ~V, ~VI... ~X roman notation, instead of the canonical, where the big
 literals have a dash above - this is for keeping it simple.
 
+####Screenshots:
+
+RDS:
+![Alt text](RDS.jpg "RDS details")
+
 Solution execution:
 ![Alt text](REPR.jpg "Solution details")
 
 
 
-DEPLOYMENT:
+####DEPLOYMENT:
 
 boto - aws AIO.
 
@@ -85,7 +85,7 @@ Next, do
 Here is a screenshot of a successful deployment:
 ![Alt text](EBS.jpg "RDS details")
 
-The app is available at:
+This app is available for testing and playing around at:
 ```http://awsflaskmicro.eu-central-1.elasticbeanstalk.com```
 
 With my public repo here:
@@ -93,6 +93,8 @@ With my public repo here:
 ```https://github.com/sheha/aws-flask-micro```
 
 Hope you like it, it's simple and effective.
+
+Regards, Ismar Sehic, Sarajevo
 
 
 
